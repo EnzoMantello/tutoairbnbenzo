@@ -36,6 +36,8 @@ gem "devise"
 # Devise Language manager
 gem "devise-i18n"
 
+
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
