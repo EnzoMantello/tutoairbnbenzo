@@ -21,16 +21,24 @@
       </div>
 
       <div class="form-group">
-        <%= f.text_field :fullname, autofocus: true, class: "form-control", placeholder: "Nom d'utilisateur", disabled: true %>
+        <%= f.text_field :fullname, autofocus: true, class: "form-control", placeholder: "Nom d'utilisateur" %>
       </div><br>
 
       <div class="form-group">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", disabled: true %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
       </div>
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %>
         </div><br>
       <% end %>
+
+      <div class="form-group">
+        <%= f.text_field :phone_number, autofocus: true, class: "form-control", placeholder: "0612345678" %>
+      </div>
+
+      <div class="form-group">
+        <textarea <%= f.text_field :description, class: "form-control text-area", placeholder: "Entrer une description" %> </textarea>
+      </div>
 
       <div class="form-group">
         <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Nouveau mot de passe" %>

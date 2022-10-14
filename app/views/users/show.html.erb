@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-5 col-md-offset-3 text-center">
+		<% if @user.avatar.attached? %>
+			<%= image_tag @user.avatar, height: 150, width: 150, class: "rounded-circle" %>
+			<% else %>
+			<%= image_tag ("default_profil.jpg"), height: 130, width: 130, class: "rounded-circle" %> <br>
+		<% end %>
+		<br>
+		<div class="card" style="width: 100%;">
+			<div class="card-body">
+				<h5 class="card-title"> <%= @user.fullname%> </h5>
+				<p  class="card-text"> <%= @user.description%> </p>
+			</div>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item"> <%= @user.phone_number%> </li>
+				<li class="list-group-item"> <%= @user.email%> </li>
+			</ul>
+			<div class="card-body">
+				<%= button_to "Retour a l'acceuil", root_path %>
+			</div>
+		</div>
+	</div>
+</div>
