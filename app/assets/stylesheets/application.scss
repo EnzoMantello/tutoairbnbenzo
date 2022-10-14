@@ -16,3 +16,12 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.background-airbnb {
+    background-image: image-url('bg-01.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}

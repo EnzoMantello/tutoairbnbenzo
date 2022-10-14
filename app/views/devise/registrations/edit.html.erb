@@ -6,11 +6,26 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="form-group">
-        <%= f.text_field :fullname, autofocus: true, class: "form-control", placeholder: "@current_user.fullname", disabled: "true" %>
+        <div class="row">
+          <div class="col-sm-4">
+          <% if resource.avatar.attached? %>
+            <%= image_tag resource.avatar, height: 130, width: 130, class: "rounded-circle" %>
+          <% else %>
+            <%= image_tag ("default_profil.jpg"), height: 130, width: 130, class: "rounded-circle" %>
+          <% end %>
+          </div>
+          <div class="col-sm-8">
+            <%= f.file_field :avatar %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_field :fullname, autofocus: true, class: "form-control", placeholder: "Nom d'utilisateur", disabled: true %>
       </div><br>
 
       <div class="form-group">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "@current_user.mail", disabled: "true" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", disabled: true %>
       </div>
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %>
