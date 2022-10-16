@@ -1,6 +1,12 @@
 class ApplicationController < ActionController::Base
     
+    helper :users
+
     before_action :configure_permitted_parameters, if: :devise_controller?
+
+    def test
+        @user = User.find(params[:id])
+    end
 
     protected
     
