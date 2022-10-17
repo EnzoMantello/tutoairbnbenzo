@@ -29,6 +29,7 @@ gem "jbuilder"
 
 # Bootstrap Gem
 gem "bootstrap-sass"
+gem 'bootstrap', '~> 5.2.2'
 
 # Devise ( gestion utilisateurs )
 gem "devise"
@@ -37,6 +38,9 @@ gem "devise-i18n"
 
 # Gravatar images tag
 gem "gravatar_image_tag"
+
+# font awesome
+gem "font-awesome-sass"
 
 
 

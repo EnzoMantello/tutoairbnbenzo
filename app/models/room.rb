@@ -3,7 +3,7 @@ class Room < ApplicationRecord
     belongs_to :user
 
     validates :user, presence: true
-    validates :price, numeicality: {only_integer: true, greater_than: 5}
+    validates :price, numericality: {only_integer: true, greater_than: 5}
     validates :address, presence: true
     validates :home_type, presence: true
     validates :room_type, presence: true

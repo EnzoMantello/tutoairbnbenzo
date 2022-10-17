@@ -4,7 +4,7 @@
     <p><i>Tous les champs sont obligatoires</i></p><br>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+      <%= render "shared/devise_errors"%>
 
       <div class="form-group">
         <%= f.text_field :fullname, autofocus: true, class: "form-control", placeholder: "Entrer votre nom(s)/prénom(s) complets" %>
