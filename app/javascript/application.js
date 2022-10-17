@@ -5,7 +5,12 @@ import "controllers"
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require jquery_ujs
+//= require toastr
 //= require turbolinks
 //= require_tree
-//= require toastr
 
+
+
+toastr.options = {
+    "positionClass": "toast-bottom-left"
+}
